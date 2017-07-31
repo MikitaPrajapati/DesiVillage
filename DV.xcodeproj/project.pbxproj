@@ -13,6 +13,7 @@
 		10D863E11F2E52CF00DECAE6 /* DV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10D863DF1F2E52CF00DECAE6 /* DV.xcdatamodeld */; };
 		10D863E31F2E52CF00DECAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D863E21F2E52CF00DECAE6 /* Assets.xcassets */; };
 		10D863E61F2E52CF00DECAE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D863E41F2E52CF00DECAE6 /* LaunchScreen.storyboard */; };
+		10D863F01F2E53A700DECAE6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D863EF1F2E53A700DECAE6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		10D863E21F2E52CF00DECAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10D863E51F2E52CF00DECAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10D863E71F2E52CF00DECAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D863EF1F2E53A700DECAE6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		10D863F11F2E53C700DECAE6 /* DV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DV.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D863F01F2E53A700DECAE6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				10D863D71F2E52CF00DECAE6 /* DV */,
 				10D863D61F2E52CF00DECAE6 /* Products */,
+				10D863EE1F2E53A700DECAE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +61,7 @@
 		10D863D71F2E52CF00DECAE6 /* DV */ = {
 			isa = PBXGroup;
 			children = (
+				10D863F11F2E53C700DECAE6 /* DV.entitlements */,
 				10D863D81F2E52CF00DECAE6 /* AppDelegate.swift */,
 				10D863DA1F2E52CF00DECAE6 /* ViewController.swift */,
 				10D863DC1F2E52CF00DECAE6 /* Main.storyboard */,
@@ -65,6 +71,14 @@
 				10D863DF1F2E52CF00DECAE6 /* DV.xcdatamodeld */,
 			);
 			path = DV;
+			sourceTree = "<group>";
+		};
+		10D863EE1F2E53A700DECAE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10D863EF1F2E53A700DECAE6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +113,16 @@
 				TargetAttributes = {
 					10D863D41F2E52CF00DECAE6 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = ECH55NGWE4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -264,7 +287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DV/DV.entitlements;
+				DEVELOPMENT_TEAM = ECH55NGWE4;
 				INFOPLIST_FILE = DV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.DV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,7 +302,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DV/DV.entitlements;
+				DEVELOPMENT_TEAM = ECH55NGWE4;
 				INFOPLIST_FILE = DV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sm.DV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
